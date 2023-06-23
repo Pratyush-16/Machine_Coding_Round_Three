@@ -44,17 +44,29 @@ const snacks = [
 export default function SnacksTable() {
 
     const [searchInput, setSearchInput] = useState('');
+    
+
+
+    const handleSearchInput =(event) => {
+        setSearchInput(event.target.value)
+    }
+
+    
+
+  
 
 
     
   return (
     <div>
 
+        <h1>Snacks Table</h1>
+
     <input
         type="text"
-        placeholder="Search snacks..."
+        placeholder="Search with products or ingredients..."
         value={searchInput}
-        // onChange={handleSearchInputChange}
+         onChange={handleSearchInput}
       />
       <table>
         <thead>
